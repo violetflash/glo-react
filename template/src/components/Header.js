@@ -1,5 +1,3 @@
-// import Hyperlink from '../Hyperlink';
-
 import Hyperlink from "./elements/Hyperlink";
 
 const Header = props => {
