@@ -1,3 +1,4 @@
+import React from 'react';
 import H2 from './elements/H2';
 import Form from './elements/Form';
 import Hyperlink from './elements/Hyperlink';

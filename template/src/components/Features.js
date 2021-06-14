@@ -1,4 +1,5 @@
 import H2 from './elements/H2';
+import React from 'react';
 import Slider from './Slider';
 
 const Features = () => {

@@ -1,3 +1,4 @@
+import React from 'react';
 
 const SliderItem = props => {
     const { prefix, img, text } = props;

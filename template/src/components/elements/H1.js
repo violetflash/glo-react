@@ -1,3 +1,5 @@
+import React from 'react';
+
 const H1 = props => {
     return <h1 className={props.className}>{props.text}</h1>
 };

@@ -1,6 +1,7 @@
+import React from 'react';
 import Hyperlink from "./elements/Hyperlink";
 
-const Header = props => {
+const Header = () => {
     return (
         <header>
             <div className="wrapper">

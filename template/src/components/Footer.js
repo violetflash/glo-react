@@ -1,3 +1,4 @@
+import React from 'react';
 import Hyperlink from "./elements/Hyperlink";
 
 const Features = () => {
