@@ -2,6 +2,7 @@ import React from 'react';
 // import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 import NavBar from "./Components/NavBar/Navbar";
+import Menu from "./Components/Menu/Menu";
 
 const GlobalStyles = createGlobalStyle`
   html {
@@ -15,11 +16,12 @@ const GlobalStyles = createGlobalStyle`
   }
   
   body {
-    background-color: #000;
-    color: #fff;
+    background-color: #FFFBEC;
+    //color: #fff;
     margin: 0;
     font-size: 20px;
     font-family: Roboto, sans-serif;
+
   }
   
   a {
@@ -39,7 +41,7 @@ const GlobalStyles = createGlobalStyle`
   }
   
   h1, h2, h3 {
-    font-family: Pacifico, sans-serif;
+    font-family: 'Philosopher', sans-serif;
     padding: 0;
     margin: 0;
   }
@@ -55,6 +57,7 @@ const App = props => {
         <React.Fragment>
             <GlobalStyles />
             <NavBar />
+            <Menu />
         </React.Fragment>
     );
 

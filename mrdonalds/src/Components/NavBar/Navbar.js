@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import logoImg from '../../images/logo.svg';
+// import logoImg from '../../images/logo.svg';
 import line from '../../images/Line1.svg';
 import baloons from '../../images/baloons2.png';
 
@@ -9,13 +9,15 @@ const NavBarStyled = styled.header`
   top: 0;
   left: 0;
   z-index: 999;
-  //height: 100px;
+  height: 100px;
   width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
   background-color: Cornsilk;
+  border-bottom: 10px solid #CCEEAE;
+
 
   color: black;
 `;
@@ -25,14 +27,16 @@ const NavBarText = styled.span`
 `;
 
 const Logo = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
+  margin-left: 15px;
   
   & p {
     position: relative;
-    margin-left: 15px;
     font-family: 'Amatic SC', cursive;
     font-size: 40px;
+    margin-top: 30px;
     padding: 5px 15px 15px;
     background-color: palevioletred;
     border-radius: 50%;
@@ -51,33 +55,78 @@ const Logo = styled.div`
       width: 170px;
       height: 8px;
       background-image: url(${line});
-     
-      
     }
+  }
+  
+  @media (max-width: 992px) {
+    & p {
+      position: relative;
+      font-family: 'Amatic SC', cursive;
+      font-size: 40px;
+      margin-top: 0;
+      padding: 5px 15px 15px;
+      background-color: palevioletred;
+      border-radius: 20px;
+      color: cornsilk;
+      max-width: 100%;
+      text-align: center;
+      line-height: 1.2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: 170px;
+        height: 8px;
+        background-image: url(${line});
+        bottom: 7px;
+      }
   }
 `;
 
 const H1 = styled.h1`
   position: relative;
-  font-size: 48px;
-  color: palevioletred;
-  margin-left: 15px;
+  font-size: 40px;
+  color: #A4687B;
   font-family: 'Philosopher', sans-serif;
   z-index: 5;
   
   &::before {
     position:absolute;
     content: '';
-    width: 95px;
-    height: 130px;
+    width: 75px;
+    height: 100px;
     background-image:url(${baloons});
     background-position: center;
-    background-size: 200px;
+    background-size: 135px;
     background-repeat: no-repeat;
-    top: 50%;
+    top: 55%;
     transform: translateY(-50%) rotate(-45deg);
-    left: -44px;
+    left: -30px;
     z-index: -1;
+  }
+  
+  @media (max-width: 992px) {
+    display:none;
+    font-size: 34px;
+
+    &::before {
+      position:absolute;
+      content: '';
+      width: 75px;
+      height: 100px;
+      background-image:url(${baloons});
+      background-position: center;
+      background-size: 100px;
+      background-repeat: no-repeat;
+      top: 55%;
+      transform: translateY(-50%) rotate(-45deg);
+      left: -50px;
+      z-index: -1;
+    }
   }
 `;
 
@@ -127,7 +176,7 @@ const Button = styled.button`
 
   & svg path {
     transition: all 0.3s ease;
-    fill: #F79F7E;
+    fill: palevioletred;
   }
 
 
@@ -149,7 +198,7 @@ const Navbar = props => {
             <Login>
                 <Button>
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0)">
+                        <g clipPath="url(#clip0)">
                             <path
                                 d="M15.772 15.4145C17.8896 15.4145 19.7234 14.655 21.2217 13.1564C22.72 11.6582 23.4795 9.82491 23.4795 7.707C23.4795 5.58982 22.72 3.75633 21.2214 2.25756C19.7229 0.759519 17.8894 0 15.772 0C13.6541 0 11.8208 0.759519 10.3225 2.2578C8.82422 3.75609 8.06445 5.58958 8.06445 7.707C8.06445 9.82491 8.82422 11.6584 10.3228 13.1567C11.8213 14.6547 13.6548 15.4145 15.772 15.4145Z"
                                 fill="white"/>
