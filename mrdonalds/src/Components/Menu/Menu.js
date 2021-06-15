@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ListItem from "../ListItem/ListItem";
 import db from './db';
+import Button from "../Button/Button";
 
 const MenuStyled = styled.main`
   //background-color: #fff;
@@ -17,18 +18,23 @@ const MenuStyled = styled.main`
   }
 `;
 
+const Section = styled.section`
+  padding: 20px 0 40px 0;
+`;
+
 const Menu = props => {
     return (
         <MenuStyled>
-            <section>
+            <Section>
                 <h3>Шары фольгированные</h3>
                 <ListItem itemList={db.foiled}/>
-            </section>
+            </Section>
 
-            <section>
+            <Section>
                 <h3>Другие товары</h3>
                 <ListItem itemList={db.other}/>
-            </section>
+            </Section>
+            <Button text="Add to cart" />
         </MenuStyled>
     )
 

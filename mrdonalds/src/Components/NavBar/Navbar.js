@@ -17,7 +17,7 @@ const NavBarStyled = styled.header`
   padding: 10px;
   padding-right: 30px;
   background-color: #fae3d9;
-  border-bottom: 10px solid #DAEFEA;
+  border-bottom: 10px solid palevioletred;
 
 
   color: black;
@@ -91,8 +91,11 @@ const Logo = styled.div`
 const H1 = styled.h1`
   position: relative;
   font-size: 40px;
+  letter-spacing: 1.7px;
   color: #A4687B;
-  font-family: 'Philosopher', sans-serif;
+  //font-family: 'Philosopher', sans-serif;
+  font-family: 'Amatic SC', cursive;
+
   z-index: 5;
   
   &::before {
@@ -106,7 +109,7 @@ const H1 = styled.h1`
     background-repeat: no-repeat;
     top: 55%;
     transform: translateY(-50%) rotate(-45deg);
-    left: -30px;
+    left: -20%;
     z-index: -1;
   }
   
