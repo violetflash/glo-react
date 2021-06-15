@@ -15,8 +15,9 @@ const NavBarStyled = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: Cornsilk;
-  border-bottom: 10px solid #CCEEAE;
+  padding-right: 30px;
+  background-color: #fae3d9;
+  border-bottom: 10px solid #DAEFEA;
 
 
   color: black;
