@@ -1,35 +1,90 @@
 import React from 'react';
 import styled from 'styled-components';
 import logoImg from '../../images/logo.svg';
+import line from '../../images/Line1.svg';
+import baloons from '../../images/baloons2.png';
 
 const NavBarStyled = styled.header`
   position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
-  height: 80px;
+  //height: 100px;
   width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
-  background-color: #299b01;
-  color: white;
+  padding: 10px;
+  background-color: Cornsilk;
+
+  color: black;
+`;
+
+const NavBarText = styled.span`
+  
 `;
 
 const Logo = styled.div`
   display: flex;
   align-items: center;
+  
+  & p {
+    position: relative;
+    margin-left: 15px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 40px;
+    padding: 5px 15px 15px;
+    background-color: palevioletred;
+    border-radius: 50%;
+    color: cornsilk;
+    max-width: 240px;
+    text-align: center;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+    &::before {
+      position: absolute;
+      content: '';
+      width: 170px;
+      height: 8px;
+      background-image: url(${line});
+     
+      
+    }
+  }
 `;
 
 const H1 = styled.h1`
-  font-size: 24px;
+  position: relative;
+  font-size: 48px;
+  color: palevioletred;
   margin-left: 15px;
+  font-family: 'Philosopher', sans-serif;
+  z-index: 5;
+  
+  &::before {
+    position:absolute;
+    content: '';
+    width: 95px;
+    height: 130px;
+    background-image:url(${baloons});
+    background-position: center;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    left: -44px;
+    z-index: -1;
+  }
 `;
 
-const ImgLogo = styled.img`
-  width: 50px;
-`;
+// const ImgLogo = styled.img`
+//   width: 150px;
+//   margin-left: 30px;
+// `;
 
 const Login = styled.div`
   display: flex;
@@ -38,10 +93,11 @@ const Login = styled.div`
   cursor:pointer;
 
   p {
-    transform: translateY(-15px);
+    transform: translateY(-2px);
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
+    color: #000;
   };
   
   &:hover {
@@ -54,7 +110,7 @@ const Login = styled.div`
     button {
       transform: translate(0);
       & svg path {
-        fill: sandybrown;
+        //fill: sandybrown;
       }
     }
   }
@@ -71,12 +127,13 @@ const Button = styled.button`
 
   & svg path {
     transition: all 0.3s ease;
+    fill: #F79F7E;
   }
 
 
   &:hover {
     & svg path {
-      fill: sandybrown;
+      //fill: sandybrown;
     }
   }
 `;
@@ -85,9 +142,10 @@ const Navbar = props => {
     return (
         <NavBarStyled>
             <Logo>
-                <ImgLogo className="" src={logoImg} alt="logo"/>
-                <H1>MrDonald's</H1>
+                <p>сплошное надувательство</p>
+                {/*<ImgLogo className="" src={logoImg} alt="logo"/>*/}
             </Logo>
+            <H1>Магазин воздушных шаров</H1>
             <Login>
                 <Button>
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
