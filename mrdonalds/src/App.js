@@ -12,7 +12,7 @@ const App = () => {
     //openItem - будет содержать данные о товаре, который откроется в модальном окне.
     //ф-ия setOpenItem - будет назначать, какой это будет товар (по которому кликнули) и будет запускать перерендер
     // компонента
-    const [openItem, setOpenItem] = React.useState('');
+    const [openItem, setOpenItem] = React.useState(null);
 
     console.log('Item', openItem);
 
@@ -22,7 +22,7 @@ const App = () => {
             <NavBar />
             <Banner />
             <Menu setOpenItem={setOpenItem}/>
-            <ModalItem />
+            <ModalItem openItem={openItem} setOpenItem={setOpenItem}/>
         </React.Fragment>
     );
 

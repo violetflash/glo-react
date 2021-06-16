@@ -146,7 +146,7 @@ const ListItem = ({ itemList, setOpenItem }) => {
                 <Card
                     key={item.id}
                     //по клику на любой из товаров будет запускаться setOpenItem и задавать стейт
-                    onClick={() => setOpenItem(item.name)}
+                    onClick={() => setOpenItem(item)}
                 >
 
                     <CardInfo>
