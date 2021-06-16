@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-// import logoImg from '../../images/logo.svg';
-import line from '../../images/Line1.svg';
 import baloons from '../../images/baloons2.png';
+import Logo from '../Logo/Logo';
 
 const NavBarStyled = styled.header`
   position: fixed;
@@ -18,74 +17,8 @@ const NavBarStyled = styled.header`
   padding-right: 30px;
   background-color: #fae3d9;
   border-bottom: 10px solid palevioletred;
-
-
   color: black;
-`;
 
-const NavBarText = styled.span`
-  
-`;
-
-const Logo = styled.div`
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-left: 15px;
-  
-  & p {
-    position: relative;
-    font-family: 'Amatic SC', cursive;
-    font-size: 40px;
-    margin-top: 30px;
-    padding: 5px 15px 15px;
-    background-color: palevioletred;
-    border-radius: 50%;
-    color: cornsilk;
-    max-width: 240px;
-    text-align: center;
-    line-height: 1.2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    
-    &::before {
-      position: absolute;
-      content: '';
-      width: 170px;
-      height: 8px;
-      background-image: url(${line});
-    }
-  }
-  
-  @media (max-width: 992px) {
-    & p {
-      position: relative;
-      font-family: 'Amatic SC', cursive;
-      font-size: 40px;
-      margin-top: 0;
-      padding: 5px 15px 15px;
-      background-color: palevioletred;
-      border-radius: 20px;
-      color: cornsilk;
-      max-width: 100%;
-      text-align: center;
-      line-height: 1.2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-
-      &::before {
-        position: absolute;
-        content: '';
-        width: 170px;
-        height: 8px;
-        background-image: url(${line});
-        bottom: 7px;
-      }
-  }
 `;
 
 const H1 = styled.h1`
@@ -134,11 +67,6 @@ const H1 = styled.h1`
   }
 `;
 
-// const ImgLogo = styled.img`
-//   width: 150px;
-//   margin-left: 30px;
-// `;
-
 const Login = styled.div`
   display: flex;
   flex-direction: column;
@@ -182,22 +110,12 @@ const Button = styled.button`
     transition: all 0.3s ease;
     fill: palevioletred;
   }
-
-
-  &:hover {
-    & svg path {
-      //fill: sandybrown;
-    }
-  }
 `;
 
 const Navbar = props => {
     return (
         <NavBarStyled>
-            <Logo>
-                <p>сплошное надувательство</p>
-                {/*<ImgLogo className="" src={logoImg} alt="logo"/>*/}
-            </Logo>
+            <Logo />
             <H1>Магазин воздушных шаров</H1>
             <Login>
                 <Button>

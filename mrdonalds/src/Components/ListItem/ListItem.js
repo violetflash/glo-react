@@ -25,23 +25,6 @@ const Name = styled.p`
   transition: all 0.3s ease-in-out;
 `;
 
-const ImgHover = styled.div`
-  position: absolute;
-  content: '';
-  //bottom: -40%;
-  left: -23px;
-  width: 320px;
-  height: 320px;
-  background-image: ${({img}) => `url(${img})`};
-  background-size: cover;
-  background-position:center;
-  opacity: 0;
-  visibility: hidden;
-  z-index: -1;
-  transition: all 0.3s ease-in-out;
-  border: 1px solid #CCCCCC;
-`;
-
 const Item = styled.figure`
   position: relative;
   width: 100%;
@@ -60,7 +43,6 @@ const Item = styled.figure`
   &::before {
     position: absolute;
     content: '';
-    //border-radius: 5px;
     width: 100%;
     height: 100%;
     left: 0;
@@ -71,7 +53,7 @@ const Item = styled.figure`
   }
 
   &:hover {
-    transform: scale(1.5) translateY(-5px);
+    //transform: scale(1.5) translateY(-5px);
   }
 `;
 
@@ -102,16 +84,6 @@ const Card = styled.li`
     text-align: center;
   }
   
-  // &:hover ${Item} {
-  //   transform: scale(1.5) translateY(-5px);
-  // }
-  
-  &:hover ${ImgHover} {
-    //opacity: 1;
-    //visibility: visible;
-    //z-index: 100;
-  }
-
   @media (max-width: 1440px) {
     width: calc((100% - 120px) / 4);
   }
@@ -128,7 +100,6 @@ const Card = styled.li`
     width: 100%;
   }
 `;
-
 
 const CardInfo = styled.aside`
   display: flex;
@@ -168,11 +139,16 @@ const Price = styled.p`
 
 
 
-const ListItem = ({itemList}) => {
+const ListItem = ({ itemList, setOpenItem }) => {
     return (
         <List>
             {itemList.map(item => (
-                <Card>
+                <Card
+                    key={item.id}
+                    //по клику на любой из товаров будет запускаться setOpenItem и задавать стейт
+                    onClick={() => setOpenItem(item.name)}
+                >
+
                     <CardInfo>
                         <Name>{item.name}</Name>
                         <Price country={item.country}>{item.price.toLocaleString('ru-RU', {
@@ -181,9 +157,7 @@ const ListItem = ({itemList}) => {
                         })}
                         </Price>
                     </CardInfo>
-                    <Item key={item.id} img={item.img}/>
-                    <ImgHover img={item.img} />
-
+                    <Item img={item.img}/>
                 </Card>
             ))}
         </List>

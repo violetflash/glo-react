@@ -7,8 +7,7 @@ import Button from "../Button/Button";
 const MenuStyled = styled.main`
   //background-color: #fff;
   background-color: #FFFBEC;
-  margin-top: 100px;
-  padding: 20px 15px;
+  padding: 0 15px 20px;
   text-align:center;
   //height: 500px;
   
@@ -22,17 +21,23 @@ const Section = styled.section`
   padding: 20px 0 40px 0;
 `;
 
-const Menu = props => {
+const Menu = ({ setOpenItem }) => {
     return (
         <MenuStyled>
             <Section>
                 <h3>Шары фольгированные</h3>
-                <ListItem itemList={db.foiled}/>
+                <ListItem
+                    itemList={db.foiled}
+                    setOpenItem={setOpenItem}
+                />
             </Section>
 
             <Section>
                 <h3>Другие товары</h3>
-                <ListItem itemList={db.other}/>
+                <ListItem
+                    itemList={db.other}
+                    setOpenItem={setOpenItem}
+                />
             </Section>
             <Button text="Add to cart" />
         </MenuStyled>
