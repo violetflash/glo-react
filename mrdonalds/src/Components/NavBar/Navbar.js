@@ -16,6 +16,8 @@ const NavBarStyled = styled.header`
   padding: 10px;
   padding-right: 30px;
   background-color: #fae3d9;
+  //background-color: #f5d7ae;
+
   border-bottom: 10px solid palevioletred;
   color: black;
 

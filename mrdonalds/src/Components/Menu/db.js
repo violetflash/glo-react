@@ -1,6 +1,12 @@
+const defaultDescription = `Фольгированный воздушный шар - прекрасно подходит для оформления детских праздников, а также 
+            может использоваться в качестве самостоятельного подарка или в составе фонтана из шаров. Имеет встроенный 
+            клапан, который позволяет гелию оставаться внутри шара длительное время (до 3-4 недель).`;
+
+const additions = ['Гелий', 'Пакетик', 'Бантик', 'Подарочная упаковка', 'Фатин', 'Индивидуальная упаковка с полиграфией',
+    'Конфетти', 'Лента'];
+
 const db = {
-    additions: ['Гелий', 'Пакетик', 'Бантик', 'Подарочная упаковка', 'Фатин', 'Индивидуальная упаковка с полиграфией',
-        'Конфетти', 'Лента'],
+
     foiled: [
         {
             name: 'Школа',
@@ -8,7 +14,8 @@ const db = {
             id: 1,
             price: 60,
             country: 'ru',
-            size: '17"/43 см'
+            size: '17"/43 см',
+            description: defaultDescription
         },
         {
             name: 'Лесные друзья',
@@ -16,7 +23,12 @@ const db = {
             id: 2,
             price: 62,
             country: 'ru',
-            size: '19"/48см'
+            size: '19"/48см',
+            description: `Воздушный шар в стиле Ретро создан по мотивам открыток известного художника Владимира Зарубина.
+            Живые эмоции зверей, красочные иллюстрации и дополненная тематика - черты любимых карточек. Подарите 
+            счастье и красивый воздушный шар как ребенку так и взрослому. Каждый найдет для себя что-то интересное 
+            и новое. Отлично сочетается с латексными и оформительскими фольгированными шарами.
+            Имеет надежный обратный клапан, который сохраняет гелий или воздух внутри шара длительное время.`
         },
         {
             name: 'Волшебный лес',
@@ -24,7 +36,11 @@ const db = {
             id: 3,
             price: 62,
             country: 'ru',
-            size: '19"/48см'
+            size: '19"/48см',
+            description: `Волшебный сказочный лес со зверятами Вудленд изображен на воздушном шаре. Woodlend - это 
+            удивительные милые животные и красочные иллюстрации. Используйте как самостоятельный подарок или в составе 
+            фонтана из шаров. Будет отлично сочетаться с фигурами: Лиса, Енот, Олененок, Зайчик и Ежик
+            Шар имеет надежный обратный клапан, который сохраняет гелий или воздух внутри шара длительное время.`
         },
         {
             name: 'Цум Цум',
@@ -32,7 +48,8 @@ const db = {
             id: 4,
             price: 62,
             country: 'spain',
-            size: '18"/46см'
+            size: '18"/46см',
+            description: defaultDescription
         },
         {
             name: 'Холодное сердце Голография',
@@ -40,7 +57,10 @@ const db = {
             id: 5,
             price: 62,
             country: 'spain',
-            size: '18"/46см'
+            size: '18"/46см',
+            description: `Сестры Эльза и Анна из мультфильма "Холодное Сердце" - всегда желанные гостьи на празднике каждой принцессы!
+            Объем гелия в воздушном шаре 0,014 куб. м.
+            Шар имеет встроенный клапан, который позволяет гелию оставаться внутри шара длительное время (до 3-4 недель).`
         },
         {
             name: 'Тигренок',
@@ -48,7 +68,8 @@ const db = {
             id: 6,
             price: 60,
             country: 'ru',
-            size: '19"/48см'
+            size: '19"/48см',
+            description: defaultDescription
         },
         {
             name: 'Леди Баг',
@@ -56,7 +77,10 @@ const db = {
             id: 7,
             price: 32,
             country: 'spain',
-            size: '18"/46см'
+            size: '18"/46см',
+            description: `Фольгированный воздушный шар - прекрасно подходит для оформления детских праздников, а также 
+            может использоваться в качестве самостоятельного подарка или в составе фонтана из шаров. Имеет встроенный 
+            клапан, который позволяет гелию оставаться внутри шара длительное время (до 3-4 недель).`
         },
         {
             name: 'Комплимент для мамы',
@@ -64,7 +88,8 @@ const db = {
             id: 8,
             price: 77,
             country: 'spain',
-            size: '18"/46см'
+            size: '18"/46см',
+            description: defaultDescription
         },
         {
             name: 'Комплимент для папы',
@@ -72,7 +97,8 @@ const db = {
             id: 9,
             price: 77,
             country: 'ru',
-            size: '19"/48см'
+            size: '19"/48см',
+            description: defaultDescription
         },
         {
             name: 'Любимой мамочке!',
@@ -80,7 +106,8 @@ const db = {
             id: 10,
             price: 60,
             country: 'spain',
-            size: '18"/46см'
+            size: '18"/46см',
+            description: defaultDescription
         },
         {
             name: 'Любимой мамочке. Цветы',
@@ -88,7 +115,8 @@ const db = {
             id: 11,
             price: 60,
             country: 'spain',
-            size: '18"/46см'
+            size: '18"/46см',
+            description: defaultDescription
         },
         {
             name: 'Смелый и сильный',
@@ -96,7 +124,8 @@ const db = {
             id: 12,
             price: 60,
             country: 'spain',
-            size: '18"/46см'
+            size: '18"/46см',
+            description: defaultDescription
         },
         {
             name: 'Покоряй вершины',
@@ -104,7 +133,8 @@ const db = {
             id: 13,
             price: 60,
             country: 'ru',
-            size: '19"/48см'
+            size: '19"/48см',
+            description: defaultDescription
         },
         {
             name: 'Живи Ярко!',
@@ -112,7 +142,8 @@ const db = {
             id: 14,
             price: 62,
             country: 'spain',
-            size: '18"/46см'
+            size: '18"/46см',
+            description: defaultDescription
         },
         {
             name: 'Смайл',
@@ -120,7 +151,8 @@ const db = {
             id: 15,
             price: 50,
             country: 'spain',
-            size: '18"/46см'
+            size: '18"/46см',
+            description: defaultDescription
         },
         {
             name: 'Краски жизни',
@@ -128,7 +160,8 @@ const db = {
             id: 16,
             price: 62,
             country: 'ru',
-            size: '19"/48см'
+            size: '19"/48см',
+            description: defaultDescription
         },
         {
             name: 'Ловец снов в упаковке',
@@ -136,7 +169,8 @@ const db = {
             id: 17,
             price: 330,
             country: 'ru',
-            size: '19"/48см'
+            size: '19"/48см',
+            description: defaultDescription
         },
         {
             name: 'Летние цветы в упаковке',
@@ -144,7 +178,8 @@ const db = {
             id: 18,
             price: 82,
             country: 'ru',
-            size: '19"/48см'
+            size: '19"/48см',
+            description: defaultDescription
         },
         {
             name: 'Ты наша гордость',
@@ -152,7 +187,8 @@ const db = {
             id: 19,
             price: 60,
             country: 'ru',
-            size: '19"/48см'
+            size: '19"/48см',
+            description: defaultDescription
         },
         {
             name: 'Счастья, добра, тепла',
@@ -160,7 +196,8 @@ const db = {
             id: 20,
             price: 82,
             country: 'ru',
-            size: '19"/48см'
+            size: '19"/48см',
+            description: defaultDescription
         },
         {
             name: 'Будь счастлива!',
@@ -168,7 +205,8 @@ const db = {
             id: 21,
             price: 62,
             country: 'ru',
-            size: '19"/48см'
+            size: '19"/48см',
+            description: defaultDescription
         },
         {
             name: 'Пусть сбудутся все мечты',
@@ -176,7 +214,8 @@ const db = {
             id: 22,
             price: 72,
             country: 'ru',
-            size: '19"/48см'
+            size: '19"/48см',
+            description: defaultDescription
         },
         {
             name: 'Лучшие друзья',
@@ -184,7 +223,8 @@ const db = {
             id: 23,
             price: 45,
             country: 'spain',
-            size: '18"/46см'
+            size: '18"/46см',
+            description: defaultDescription
         },
         {
             name: 'Всего Cвежего',
@@ -192,7 +232,8 @@ const db = {
             id: 24,
             price: 62,
             country: 'spain',
-            size: '18"/46см'
+            size: '18"/46см',
+            description: defaultDescription
         },
         {
             name: 'Сердце',
@@ -200,7 +241,8 @@ const db = {
             id: 25,
             price: 72,
             country: 'spain',
-            size: '18"/46см'
+            size: '18"/46см',
+            description: defaultDescription
         },
         {
             name: 'Ты самый лучший',
@@ -208,7 +250,8 @@ const db = {
             id: 26,
             price: 60,
             country: 'ru',
-            size: '19"/48см'
+            size: '19"/48см',
+            description: defaultDescription
         },
         {
             name: 'Детка, ты просто космос',
@@ -216,7 +259,8 @@ const db = {
             id: 27,
             price: 72,
             country: 'ru',
-            size: '19"/48см'
+            size: '19"/48см',
+            description: defaultDescription
         },
         {
             name: 'Счастье это ты!',
@@ -224,7 +268,8 @@ const db = {
             id: 28,
             price: 72,
             country: 'spain',
-            size: '18"/46см'
+            size: '18"/46см',
+            description: defaultDescription
         },
         {
             name: 'Сияй',
@@ -232,7 +277,8 @@ const db = {
             id: 29,
             price: 60,
             country: 'spain',
-            size: '18"/46см'
+            size: '18"/46см',
+            description: defaultDescription
         },
         {
             name: 'Ты просто огонь',
@@ -240,7 +286,8 @@ const db = {
             id: 30,
             price: 92,
             country: 'ru',
-            size: '19"/48см'
+            size: '19"/48см',
+            description: defaultDescription
         },
         {
             name: 'Синий мрамор',
@@ -248,43 +295,54 @@ const db = {
             id: 31,
             price: 172,
             country: 'ru',
-            size: '19"/48см'
+            size: '19"/48см',
+            description: defaultDescription
         },
     ],
     other: [
         {
             name: 'Ручной насос',
             img: '/baloons/other/01.jpg',
-            id: 1,
+            id: 901,
             price: 250,
+            size: '48см',
+            country: 'ru',
             choices: ['Фиолетовый', 'Белый', 'Синий', 'Красный'],
         },
         {
             name: 'Стойка для шаров',
             img: '/baloons/other/02.jpg',
-            id: 2,
+            id: 902,
             price: 1340,
+            size: '150см/48см',
+            country: 'ru',
             choices: ['20 отверстий', '30 отверстий', '40 отверстий', '50 отверстий'],
         },
         {
             name: 'Сетка для сброса / запуска шаров',
             img: '/baloons/other/03.jpg',
-            id: 3,
+            id: 903,
             price: 900,
+            size: '200см * 100см',
+            country: 'spain',
             choices: ['100 шаров', '200 шаров', '300 шаров', '500 шаров'],
         },
         {
             name: 'Конфетти, квадраты',
             img: '/baloons/other/04.jpg',
-            id: 4,
+            id: 904,
             price: 980,
+            size: 'квадраты 2см',
+            country: 'spain',
             choices: ['Золото', 'Серебро', 'Ассортимент цветов'],
         },
         {
             name: 'Воздух',
             img: '/baloons/other/05.jpg',
-            id: 5,
+            id: 905,
             price: 2600,
+            size: 'без размера',
+            country: 'ru',
             choices: ['Простой', 'Апельсиновый', 'Клубничный', 'Лесные ароматы'],
         },
     ]

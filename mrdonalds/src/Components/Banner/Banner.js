@@ -10,6 +10,8 @@ const BannerSection = styled.section`
   justify-content: center;
   background-color: paleturquoise;
   padding-bottom: 20px;
+  
+
 `;
 
 const BannerWrapper = styled.article`
@@ -19,6 +21,8 @@ const BannerWrapper = styled.article`
   flex-direction: column;
   padding-top: 20px;
   max-width: 1200px;
+
+
 `;
 
 const PercentsImg = styled.img`

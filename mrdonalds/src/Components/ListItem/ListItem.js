@@ -108,7 +108,9 @@ const CardInfo = styled.aside`
   flex-direction: column;
   width: 100%;
   padding-left: 20px;
-  background-color: #f5d7ae;
+  //background-color: #f5d7ae;
+  background-color: rgba(209, 143, 57, 0.4);
+  //background-color: #fae3d9;
 `;
 
 const Price = styled.p`
