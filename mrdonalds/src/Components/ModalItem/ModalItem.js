@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../Button/Button';
 import styled from 'styled-components';
 
 const Overlay = styled.div`
@@ -8,7 +9,7 @@ const Overlay = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  z-index: 100;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -19,8 +20,13 @@ const Modal = styled.div`
   width: 600px;
   height: 600px;
   border-radius: 10px;
+  z-index: 100;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 
+  @media (max-width: 1200px) {
+    width: 500px;
+    height: 500px;
+  }
 
 `;
 
@@ -29,18 +35,57 @@ const BannerWrapper = styled.div`
   width: 100%;
   background-color:#fff;
   border-radius: 10px;
+  
+  
+  @media (max-width: 1200px) {
+    height: 200px;
+  }
 
 `;
 
 const Banner = styled.div`
   width: 70%;
-  height: 400px;
-  background-color: #000;
+  height: 100%;
+  background-color: #fff;
   background-image: url(${( ({ img }) => img)});
-  background-size: cover;
+  background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
   margin: 0 auto 20px;
+`;
 
+const ModalInfo = styled.div`
+  padding: 10px 15px;
+  font-size: 16px;
+  
+`;
+
+const Name = styled.h3`
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+`;
+
+const InfoLine = styled.p`
+  font-weight: 700;
+  margin-bottom: 5px;
+  
+  span {
+    font-weight: 400;
+    margin-left: 15px;
+  }
+`;
+
+
+const ModalFooter = styled.footer`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+  
+  div {
+    margin: 0;
+  }
 `;
 
 const ModalItem = ({ openItem, setOpenItem }) => {
@@ -60,9 +105,21 @@ const ModalItem = ({ openItem, setOpenItem }) => {
             <Modal>
                 <BannerWrapper>
                     <Banner img={openItem.img}/>
-                    Test
                 </BannerWrapper>
-
+                <ModalInfo>
+                    <Name>{openItem.name}</Name>
+                    <InfoLine>Размер: <span>{openItem.size}</span></InfoLine>
+                    <InfoLine>Страна: <span>{openItem.country}</span></InfoLine>
+                    <InfoLine>Цена: <span>
+                        {openItem.price.toLocaleString('ru-RU', {
+                            style: 'currency',
+                            currency: 'RUB'
+                        })}
+                    </span></InfoLine>
+                </ModalInfo>
+                <ModalFooter>
+                    <Button text="Добавить в корзину"/>
+                </ModalFooter>
             </Modal>
         </Overlay>
     );

@@ -39,7 +39,6 @@ const Menu = ({ setOpenItem }) => {
                     setOpenItem={setOpenItem}
                 />
             </Section>
-            <Button text="Add to cart" />
         </MenuStyled>
     )
 
